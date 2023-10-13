@@ -16,12 +16,12 @@ export class AppComponent {
     {
       imageSrc: "https://source.unsplash.com/1200x800/?technology",
       imageAlt: 'tech',
-      imgDesc: "Technologu"
+      imgDesc: "Technology"
     },
     {
       imageSrc: "https://source.unsplash.com/1200x800/?animal",
       imageAlt: 'ani',
-      imgDesc: "Animl"
+      imgDesc: "Animal"
     },
     {
       imageSrc: "https://source.unsplash.com/1200x800/?food",
