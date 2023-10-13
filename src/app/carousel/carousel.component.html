@@ -1,0 +1,35 @@
+<div *ngIf="images && images.length >0" class="carousel-container">
+
+    <div class="slider-component" *ngFor="let image of images; let i =index">
+
+        <!-- {{ selectedIndex ===i? image.imgDesc:""}} -->
+
+
+        <img [src]="image.imageSrc" [alt]="image.imageAlt" [ngClass]="{'image-active' :selectedIndex=== i }"
+            class="fade">
+
+        <p>
+            <!-- {{image.imgDesc}} -->
+            {{ selectedIndex ===i? image.imgDesc:""}}
+        </p>
+
+    </div>
+
+    <!-- <div *ngFor="let image of images; let i =index"  class="fade">
+
+    </div> -->
+
+    <div *ngIf="indicators" class="carousel-sqr-container">
+        <span *ngFor="let dot of images; let i=index" class="sqr" [ngClass]="{'active':selectedIndex ===i}"
+            (click)="selectImage(i)"></span>
+    </div>
+
+    <div *ngIf="controls" class="btn-carousel btn-prev">
+        <i class="fa-solid fa-arrow-left" (click)="onPrevClick()"></i>
+    </div>
+
+    <div *ngIf="controls" class="btn-carousel btn-next">
+        <i class="fa-solid fa-arrow-right" (click)="onNextClick()"></i>
+    </div>
+
+</div>
